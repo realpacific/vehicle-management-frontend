@@ -8,6 +8,7 @@ import { LandingComponent } from './landing/landing.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { VehiclesListComponent } from './vehicles-list/vehicles-list.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     MainComponent,
     LandingComponent,
-    LoginComponent
+    LoginComponent,
+    VehiclesListComponent
   ],
   imports: [
     BrowserModule,

@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { LoginService } from '../service/login.service';
-import { BaseResponse } from '../app.constant';
 import { HttpErrorResponse } from '@angular/common/http';
 import { openSync } from 'fs';
+import { Router } from '@angular/router';
+import { BaseResponse } from '../entities/base-response';
 
 @Component({
   selector: 'app-login',
@@ -14,12 +15,14 @@ import { openSync } from 'fs';
 export class LoginComponent implements OnInit {
 
   hide: boolean = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
-  password = new FormControl('', [Validators.required]);
+  email: FormControl
+  password: FormControl
 
-  constructor(private _snackBar: MatSnackBar, private loginService: LoginService) { }
+  constructor(private _snackBar: MatSnackBar, private loginService: LoginService, private router: Router) { }
 
   ngOnInit() {
+    this.email = new FormControl('', [Validators.required, Validators.email]);
+    this.password = new FormControl('', [Validators.required]);
   }
 
   openSnackBar(message: string) {
@@ -40,7 +43,7 @@ export class LoginComponent implements OnInit {
       return;
     }
     this.loginService.authenticateUser(this.email.value, this.password.value).subscribe(response => {
-
+      this.router.navigate([this.email.value, "vehicles"])
     }, error => {
       this.openSnackBar((<BaseResponse>(<HttpErrorResponse>error).error).message)
     })

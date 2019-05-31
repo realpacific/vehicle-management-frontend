@@ -9,12 +9,12 @@
 
     <mat-card-content fxLayout="column">
       <mat-form-field>
-        <input matInput placeholder="Enter your email" [formControl]="email" required>
+        <input matInput placeholder="Enter your email" [formControl]="email" required value="prashantbarahi@gmail.com">
         <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [formControl]="password" />
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [formControl]="password" value="password"/>
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
           [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>

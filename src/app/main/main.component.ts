@@ -19,30 +19,17 @@ export class MainComponent implements OnInit {
     constructor(public ngZone: NgZone, public route: Router, ) {
         this.navList = [
             {
-                categoryName: 'Tab 1', icon: 'face', dropDown: false,
-                subCategory:
-                    [
-                        { subCategoryName: 'Item 1', subCategoryLink: '#', visable: true, },
-                        { subCategoryName: 'Item 2', subCategoryLink: '#', visable: true, },
-                        { subCategoryName: 'Item 3', subCategoryLink: '#', visable: true, },
-                    ]
+                categoryName: 'Vehicle', icon: 'add', clickAction: "/"
             },
             {
-                categoryName: 'Tab 2', icon: 'question_answer', dropDown: false,
-                subCategory:
-                    [
-                        { subCategoryName: 'Item 1', subCategoryLink: '#', visable: true, },
-                        { subCategoryName: 'Item 2', subCategoryLink: '#', visable: true, },
-                        { subCategoryName: 'Item 3', subCategoryLink: '#', visable: true, },
-                    ]
+                categoryName: 'Add Vehicle', icon: 'directions_car', clickAction: "/"
             },
             {
-                categoryName: 'Tab 3', icon: 'work', dropDown: false,
-                subCategory:
-                    [
-                        { subCategoryName: 'Item 1', subCategoryLink: '#', visable: true, },
-                        { subCategoryName: 'Item 2', subCategoryLink: '#', visable: true, },
-                    ]
+                categoryName: 'Profile', icon: 'account_circle', clickAction: "/"
+
+            },
+            {
+                categoryName: 'Logout', icon: 'exit_to_app', clickAction: ""
             },
         ];
         this.changeMode();
@@ -75,13 +62,12 @@ export class MainComponent implements OnInit {
 export class NavList {
     categoryName: string;
     icon: string;
-    dropDown: boolean;
-    subCategory: NavListItem[];
-    constructor(_categoryName: string, _icon: string, _dropDown: boolean, _subCategory: NavListItem[]) {
+    clickAction: string;
+
+    constructor(_categoryName: string, _icon: string, _clickAction: string) {
         this.categoryName = _categoryName;
         this.icon = _icon;
-        this.dropDown = _dropDown;
-        this.subCategory = _subCategory;
+        this.clickAction = _clickAction;
     }
 }
 

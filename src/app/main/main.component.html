@@ -19,7 +19,7 @@
     style="width:240px;">
 
     <ng-container *ngFor="let nav of navList">
-      <mat-list>
+      <mat-list routerLink={{nav.clickAction}}>
         <mat-list-item>
           <mat-icon mat-list-icon>{{nav.icon}}</mat-icon>
           <span class="nav-list-item-text">{{nav.categoryName}}</span>
