@@ -1,0 +1,45 @@
+.sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-nav {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100% !important;
+  z-index: 5;
+}
+
+.icon-padding {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.mat-icon-active mat-icon {
+  transition: color 0.2s linear;
+  color: blue !important;
+}
+
+.nav-category-open {
+  transition: color 0.2s linear;
+  color: blue !important;
+}
+
+mat-list:hover {
+  transition: color 0.2s linear;
+  cursor: pointer;
+  background: lightgray;
+}
+
+mat-toolbar {
+  height: 64px !important;
+  min-height: 64px !important;
+}
+
+.fill-remaining-space {
+  flex-grow: 1
+}

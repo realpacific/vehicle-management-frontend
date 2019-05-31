@@ -1,0 +1,24 @@
+.login-container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  display: block;
+  width: auto;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+mat-card-header {
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  width: 100%;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
