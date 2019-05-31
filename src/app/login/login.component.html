@@ -2,7 +2,7 @@
   <mat-card class="login-container">
     <mat-card-header>
       <mat-card-title>
-        <span class="mat-display-2">LOGIN</span>
+        <span class="mat-display-1">Login to Vehicle Management System</span>
       </mat-card-title>
     </mat-card-header>
 
@@ -14,7 +14,8 @@
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [formControl]="password" value="password"/>
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [formControl]="password"
+          value="password" />
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
           [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -25,5 +26,8 @@
     <mat-card-actions>
       <button (click)=authenticateUser() mat-raised-button color="primary">LOGIN</button>
     </mat-card-actions>
+
+    <span id="signup">Don't have an account? <a style='margin-left:0.25em; display:inline-block;' routerLink="/signup">
+        Sign up here.</a></span>
   </mat-card>
 </div>

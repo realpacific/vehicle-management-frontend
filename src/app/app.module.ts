@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VehiclesListComponent } from './vehicles-list/vehicles-list.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { VehiclesListComponent } from './vehicles-list/vehicles-list.component';
     MainComponent,
     LandingComponent,
     LoginComponent,
-    VehiclesListComponent
+    VehiclesListComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

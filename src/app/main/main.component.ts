@@ -19,10 +19,10 @@ export class MainComponent implements OnInit {
     constructor(public ngZone: NgZone, public route: Router, ) {
         this.navList = [
             {
-                categoryName: 'Vehicle', icon: 'add', clickAction: "/"
+                categoryName: 'Vehicle', icon: 'directions_car', clickAction: "/"
             },
             {
-                categoryName: 'Add Vehicle', icon: 'directions_car', clickAction: "/"
+                categoryName: 'Add Vehicle', icon: 'add', clickAction: "/"
             },
             {
                 categoryName: 'Profile', icon: 'account_circle', clickAction: "/"

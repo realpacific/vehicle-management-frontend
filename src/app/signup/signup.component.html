@@ -1,0 +1,63 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="login-container">
+    <mat-card-header>
+      <mat-card-title>
+        <span class="mat-display-1">Sign up</span>
+      </mat-card-title>
+    </mat-card-header>
+
+
+    <mat-card-content fxLayout="column">
+      <mat-form-field>
+        <input matInput placeholder="Email" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Full name" [formControl]="name" required>
+        <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" [formControl]="password" />
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input matInput placeholder="Confirm your password" [type]="hide ? 'password' : 'text'"
+          [formControl]="passwordConfirm" />
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Mobile No." [formControl]="phone" required>
+        <mat-error *ngIf="phone.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Address" [formControl]="address" required>
+        <mat-error *ngIf="address.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+
+
+    </mat-card-content>
+
+    <span class="center">By clicking on "Sign up" button, you agree to our <a
+        style='margin-left:0.25em; display:inline-block;' routerLink="/">
+        Terms & Conditions.</a></span>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary">SIGN UP</button>
+    </mat-card-actions>
+
+    <span class="center">Already have an account? <a style='margin-left:0.25em; display:inline-block;' routerLink="/">
+        Login here.</a></span>
+  </mat-card>
+</div>
